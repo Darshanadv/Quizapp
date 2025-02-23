@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    background: #333;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+}
+
+main {
+    margin-top: 60px;
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#answers, #answer-bottons {
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.correct {
+    background: green;
+}
+
+.wrong {
+    background: red;
+}
+
+#score {
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Progress Bar */
+.process {
+    height: 10px;
+    width: 0%;
+    background: green;
+    transition: width 0.3s;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* Loader */
+#loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid blue;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
